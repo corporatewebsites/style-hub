@@ -1,5 +1,6 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { useCart } from "@/context/CartContext";
 
 const navLinks = [
   { to: "/shop", label: "Магазин" },
@@ -9,6 +10,7 @@ const navLinks = [
 
 export function SiteLayout({ children }: { children: ReactNode }) {
   const pathname = useRouterState({ select: (s) => s.location.pathname });
+  const { count } = useCart();
 
   return (
     <div className="min-h-screen bg-background text-foreground font-sans">
@@ -41,7 +43,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           <Link to="/account" className="hover:text-muted transition-colors">
             Кабинет
           </Link>
-          <button className="hover:text-muted transition-colors">Корзина (0)</button>
+          <button className="hover:text-muted transition-colors">Корзина ({count})</button>
         </div>
       </nav>
 
