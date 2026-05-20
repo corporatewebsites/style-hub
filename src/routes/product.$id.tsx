@@ -46,8 +46,8 @@ const fmt = new Intl.NumberFormat("ru-RU");
 
 function ProductPage() {
   const { product } = Route.useLoaderData();
-  const gallery = product.gallery && product.gallery.length > 0 ? product.gallery : [product.image];
-  const sizes = product.sizes ?? ["XS", "S", "M", "L", "XL"];
+  const gallery: string[] = product.gallery && product.gallery.length > 0 ? product.gallery : [product.image];
+  const sizes: string[] = product.sizes ?? ["XS", "S", "M", "L", "XL"];
 
   const [activeImage, setActiveImage] = useState(gallery[0]);
   const [size, setSize] = useState<string | null>(sizes.length === 1 ? sizes[0] : null);
