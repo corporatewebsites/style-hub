@@ -1,10 +1,16 @@
 import type { Product } from "@/data/products";
+import { Link } from "@tanstack/react-router";
 
 const fmt = new Intl.NumberFormat("ru-RU");
 
 export function ProductCard({ product, delay = 0 }: { product: Product; delay?: number }) {
   return (
-    <div className="group cursor-pointer animate-reveal" style={{ animationDelay: `${delay}ms` }}>
+    <Link
+      to="/product/$id"
+      params={{ id: product.id }}
+      className="group cursor-pointer animate-reveal block"
+      style={{ animationDelay: `${delay}ms` }}
+    >
       <div className="aspect-[3/4] bg-surface overflow-hidden mb-4 relative">
         <img
           src={product.image}
@@ -35,6 +41,6 @@ export function ProductCard({ product, delay = 0 }: { product: Product; delay?: 
           <span className="text-[13px] font-mono whitespace-nowrap">{fmt.format(product.price)} ₽</span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
