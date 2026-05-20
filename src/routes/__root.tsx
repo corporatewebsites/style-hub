@@ -76,10 +76,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "LÜMERE — Концептуальная одежда" },
       { name: "description", content: "Концептуальный магазин одежды: коллекции, акции, журнал и личный кабинет." },
       { property: "og:title", content: "LÜMERE — Концептуальная одежда" },
-      { property: "og:description", content: "Коллекции, акции, журнал и личный кабинет." },
+      { property: "og:description", content: "Концептуальный магазин одежды: коллекции, акции, журнал и личный кабинет." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "LÜMERE — Концептуальная одежда" },
+      { name: "twitter:description", content: "Концептуальный магазин одежды: коллекции, акции, журнал и личный кабинет." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/889876e1-09b6-406c-b3b4-09a108743dda/id-preview-827e415d--2ddc0a7b-80b5-4280-82b2-6cee3d9c373a.lovable.app-1779265900872.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/889876e1-09b6-406c-b3b4-09a108743dda/id-preview-827e415d--2ddc0a7b-80b5-4280-82b2-6cee3d9c373a.lovable.app-1779265900872.png" },
     ],
     links: [
       {
