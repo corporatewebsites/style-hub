@@ -36,10 +36,7 @@ export const products: Product[] = [
   { id: "blazer-07", name: "Двубортное пальто", color: "Ivory Wool", price: 89000, image: blazer, category: "Верхняя одежда", isNew: true, gallery: [blazer, trousers, accessories], description: "Объёмное двубортное пальто длины миди из тёплой шерсти альпаки.", composition: "Шерсть 70%, альпака 30%.", sizes: defaultSizes },
   { id: "knit-08", name: "Объёмный свитер косами", color: "Ecru", price: 24500, image: knit, category: "Трикотаж", gallery: [knit, blazer, accessories], description: "Тяжёлый свитер плотной вязки с рельефными косами и высоким воротником.", composition: "Шерсть мериноса 100%.", sizes: defaultSizes },
   { id: "shirt-09", name: "Поплиновая рубашка", color: "Optic White", price: 19500, oldPrice: 27000, image: shirt, category: "Рубашки", onSale: true, gallery: [shirt, blazer, accessories], description: "Базовая поплиновая рубашка прямого кроя с классическим воротником.", composition: "Хлопок 100%.", sizes: defaultSizes },
-].map((p) => ({
-  description: defaultDescription,
-  composition: defaultComposition,
-  sizes: defaultSizes,
-  gallery: [p.image],
-  ...p,
-}));
+];
+
+void defaultDescription;
+void defaultComposition;
